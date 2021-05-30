@@ -1,5 +1,4 @@
 from connect4.board import Board
-from connect4.utils import get_int_input
 import numpy as np
 
 
@@ -14,7 +13,7 @@ class Game:
 
         while True:
             print(f"Player {player_label} choose column")
-            player_move = get_int_input()
+            player_move = int(input())
 
             if self.board.is_valid_move(player_move):
                 return player_move
