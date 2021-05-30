@@ -69,6 +69,8 @@ class Board:
             for i in range(self.num_rows):
                 if self.board[i, j] == player_idx:
                     counter += 1
+                else:
+                    counter = 0
             if counter >= 4:
                 return True
 
@@ -81,6 +83,8 @@ class Board:
             for j in range(self.num_cols):
                 if self.board[i, j] == player_idx:
                     counter += 1
+                else:
+                    counter = 0
             if counter >= 4:
                 return True
 
@@ -107,6 +111,8 @@ class Board:
 
                 if diag[i] == player_idx:
                     counter += 1
+                else:
+                    counter = 0
 
             if counter >= 4:
                 return True
