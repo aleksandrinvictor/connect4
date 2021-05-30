@@ -8,6 +8,8 @@ WORKDIR /workspaces/connect4
 RUN curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
 
 COPY ./pyproject.toml ./
+RUN mkdir connect4
+COPY ./connect4 ./connect4
 
 ENV PATH=/root/.poetry/bin:$PATH
 
